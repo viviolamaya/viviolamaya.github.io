@@ -1,0 +1,715 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.page-head{
+    width: 100%;
+    /* background-color: blanchedalmond; */
+    background-color:white;
+    /* background-image: linear-gradient(180deg, white, blanchedalmond); */
+    /* background-image: url(assets/download.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar-links{
+    align-items: center;
+    display: flex;
+    background-color: #1e2c49;
+    /* position: relative;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    */
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: top 0.3s;
+}
+
+.up-scroll{
+    margin: 20px;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.up-scroll img{
+    width: 50px;
+}
+
+/* .navbar-links[data-scroll="out"] {
+    transform:translateY(-100%);
+}
+
+[data-scroll-dir-y="-1"] .navbar-links {
+    transform: translatey(0);
+  } */
+
+.navbar-links ul{
+    width: 60%;
+    height: 50px;
+    /* background-color: transparent; */
+    /* background-color: #e2a38f; */
+    margin-left: auto;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* position: absolute; */
+    list-style: none;
+}
+
+.navbar-links a{
+    color:whitesmoke;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.9;
+    transition: 0.3s;;
+}
+
+.navbar-links a:hover{
+    color:#93A7C0
+}
+
+.active .navi {
+    color: red;
+}
+
+a:-webkit-any-link {
+
+    cursor: pointer;
+}
+
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    width: 30px;
+    justify-content: space-between ;
+    margin: 15px 30px 30px auto;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -10px;
+    top: -7px;
+    cursor: pointer;
+    /* z-index: -1; */
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color:whitesmoke ;
+    border-radius: 3px;
+}
+
+.home{
+    color:whitesmoke;
+    font-size: 20px;
+    font-weight: 500; 
+    width: 100%;
+    height: 400px;
+    padding-top: 120px;
+    /* margin: 80px auto 0px; */
+    /* border: 3px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1e2c49;
+}
+.home-img{
+    text-align: center;
+}
+
+.home-img img{
+    width: 602px;
+    height: 300px;
+    /* border: 2px solid white; */
+}
+
+.home-title .name-full{
+    color: #e2a38f;
+   /* text-align: center; */
+}
+
+.home-title .name-is{
+    font-size: 50px;
+}
+
+.home-title .name{
+    color:whitesmoke;
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'Nunito', sans-serif;
+    opacity: 0.9; 
+}
+
+.home-title .stack{
+    opacity: 0.9; 
+}
+
+.wave{
+    margin-top: -12px;
+}
+
+.icons{
+    /* text-align: center; */
+   margin-top: 20px;
+}
+
+.icons a{
+    letter-spacing: 20px;
+    color:whitesmoke;
+    opacity: 0.9;
+}
+
+.icons a:hover{
+    color: #e2a38f;
+}
+
+.about{
+    height: 600px;
+    /* background-color: blanchedalmond; */
+}
+
+.about-title{
+    width: 200px;
+    margin: 0px auto;
+    color:#1e2c49;
+    font-size: 40px;
+    font-weight: 800; 
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+
+    border-bottom: 2px solid #1e2c49 ;
+}
+
+.about-page{
+    /* border: 2px solid black; */
+    /* background-color: white; */
+    opacity: 0.9;
+    width: 80%;
+    height: 550px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.about-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.about-me{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-summary{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.about-summary .summary{
+    color:#1e2c49;
+    font-size: 20px;
+    font-weight: 800; 
+    font-family: 'Nunito', sans-serif;
+    line-height: 35px;
+}
+
+.about-summary button{
+    color:white;
+    background-color: #1e2c49 ;
+    border: none;
+    /* border: 2px solid #1e2c49; */
+    margin-top: 30px;
+    padding: 7px 20px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 800; 
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+}
+
+.about-summary button:hover{
+    padding: 10px 23px;
+}
+
+.skills-page{
+    padding-top: 100px;
+    width: 80%;
+    height: 700px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+.skills-title{
+    width: 300px;
+    margin: 0px auto;
+    /* color:#1e2c49; */
+    color: #1e2c49;
+    font-size: 40px;
+    font-weight: 800; 
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+
+    border-bottom: 2px solid #1e2c49 ;
+}
+
+.skill-icons{
+    width: 50%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto;
+}
+
+.skill-icons div{
+    text-align: center;
+    margin: 30px;
+}
+
+.skill-icons img{
+    width: 120px;
+}
+
+.skill-icons p{
+    font-size: 20px;
+    font-weight: 800; 
+    font-family: 'Nunito', sans-serif;
+}
+
+.java img{
+    width: 85px;
+}
+
+.project-page{
+    background-color: #1e2c49;
+    height: 620px;
+}
+
+.project-tittle{
+    width: 200px;
+    margin: -120px 200px 60px;
+    /* color:#1e2c49; */
+    color: whitesmoke;
+    font-size: 40px;
+    font-weight: 800; 
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+
+    border-bottom: 2px solid whitesmoke ;
+}
+
+.project-card{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    border: none;
+}
+
+.project-card div{
+    width: 500px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(211, 211, 211, 0.397);
+    box-shadow: grey 0px 10px 30px -15px;
+    transition: all 0.3s ease;
+
+}
+
+.project-card img {
+    width: 350px;
+    height: 200px;
+}
+
+.project-card div p {
+    color: grey;
+}
+
+.project .svg2{
+    margin-top: -5px;
+}
+
+.contact-page{
+    margin-top: -120px;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-page img{
+    width: 600px;
+    height: 350px;
+}
+
+.contact-fill{
+    margin: 50px 100px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-tittle{
+    /* width: 200px; */
+    /* margin: 0px auto; */
+    color:#1e2c49;
+    font-size: 40px;
+    font-weight: 800; 
+    font-family: 'Nunito', sans-serif;
+    /* text-align: center; */
+
+    border-bottom: 2px solid #1e2c49 ;
+}
+
+.contact-text{
+    color:gray;
+    font-size: 20px;
+    font-weight: 800; 
+    font-family: 'Nunito', sans-serif;
+}
+
+.email-send{
+    color:#e2a38f;
+    font-size: 30px;
+    font-weight: 800; 
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+}
+
+.email-send:hover{
+    font-size: 35px;
+}
+
+.icons-contact a{
+    letter-spacing: 20px;
+    color:#1e2c49;
+    opacity: 0.9;
+}
+
+.icons-contact a:hover{
+    opacity: 0.7;
+}
+
+.text{
+    width: max-content;
+    color:gray;
+    font-size: 15px;
+    font-weight: 800; 
+    font-family: 'Nunito', sans-serif;
+    margin: 10px auto;
+}
+
+.navbar-links ul button{
+    display: none;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 1120px){
+    .home div{
+        margin-left: 10px;
+    }
+
+
+    .home-title .name {
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    .home-title .name-is{
+        font-size: 30px;
+    }
+
+    .home-img img {
+        width: 402px;
+        height: 200px;
+    }
+
+    .project-card div {
+        width: 300px;
+    }
+
+    .skills-page{
+        margin-top: 200px;
+    }
+
+    .skills-page{
+        margin-top: 400px;
+    }
+    .project .svg1{
+        margin-top: 400px;
+    }
+
+    .project .svg2{
+        margin-top: -5px;
+    }
+
+    .project-tittle{
+        margin: -10px auto;
+    }
+
+    .project-card div{
+        width: 500px;
+        margin: 20px;
+    }
+
+    .project-card img{
+        width: 200px;
+    }
+
+    .contact-page{
+        margin-top: 10px;
+    }
+
+    .contact-page img{
+        width: 400px;
+        height: 300px;;
+    }
+
+   
+
+}
+
+@media screen and (max-width: 768px){
+    .home{
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .about{
+        margin-top: 50px;
+    }
+
+    .about-me{
+        height: max-content;
+    }
+
+    .about-img img{
+        margin-top: 30px;
+    }
+
+    .skills-page{
+        margin-top: 300px;
+    }
+
+    .project .svg1{
+        margin-top: 400px;
+    }
+
+    .project .svg2{
+        margin-top: -2px;
+    }
+
+    .project-tittle{
+        margin: -10px auto;
+    }
+
+    .project-card div{
+        width: 500px;
+        margin: 20px;
+    }
+
+    .project-card img{
+        width: 200px;
+    }
+
+    .contact-page{
+        margin-top: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .navbar-links ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #e2a38f;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    .navbar-links ul.slide {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .navbar-links ul button{
+        position: absolute;
+        top: -0;
+        right: 0;
+        color: whitesmoke;
+        font-size: 25px;
+        font-weight: 800; 
+        font-family: 'Nunito', sans-serif;
+        padding-right: 15px;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        cursor: pointer;
+    }
+
+    .navbar-links ul button:focus {
+        outline: 0;
+      }
+
+    .navbar-links ul button:hover {
+        color: #1e2c49;
+    }
+
+    .home{
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .home-title .name {
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    .home-title .name-is{
+        font-size: 25px;
+    }
+
+    .home-img img {
+        width: 262px;
+        height: 150px;
+    }
+
+    .home div{
+        margin-left: 2px;
+    }
+
+    .icons svg{
+        width: 27px;
+    }
+
+    .menu-toggle{
+        display: flex;
+    }
+
+    .about-title{
+        width: 100px;
+        font-size: 30px;
+    }
+
+    .skills-page{
+        margin-top: 600px;
+    }
+
+    .skills-title {
+        width: 200px;
+        font-size: 30px;
+    }
+
+    .project .svg1{
+        margin-top: 400px;
+    }
+
+    .project .svg2{
+        margin-top: -1px;
+    }
+
+    .project-page{
+        height: max-content;
+    }
+
+    .project-tittle{
+        margin: -10px auto;
+    }
+
+    .project-card{
+        flex-direction: column;
+        align-items: center;
+        /* padding-left: 15px; */
+    }
+
+    .project-card div{
+        width: 250px;
+        margin-top: 30px;
+    }
+
+    .project-card img{
+        width: 200px;
+    }
+
+    .contact-page{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .contact-page img{
+        width: 250px;
+    }
+
+    .contact-tittle{
+        width: 200px;
+        font-size: 30px;
+    }
+
+    .contact-fill{
+        width: 80%;
+    }
+
+    .email-send{
+        font-size: 20px;
+    }
+
+    .icons-contact svg{
+        width: 25px;
+    }
+
+}
