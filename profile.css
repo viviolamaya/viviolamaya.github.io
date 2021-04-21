@@ -13,7 +13,7 @@ a {
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
   }
 
 .page-head{
@@ -231,7 +231,7 @@ a:-webkit-any-link {
     height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-around;   
     align-items: center;
 }
 
@@ -364,6 +364,11 @@ a:-webkit-any-link {
 .project-card img {
     width: 350px;
     height: 200px;
+}
+
+.project-card img:hover{
+    width: 360px;
+    height: 210px;
 }
 
 .project-card div p {
